@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazyn GiTA - Panel Zarządzania</title>
+</head>
+<body>
+
+    <div class="Wrapper">
+        
+        <aside class="panelbok">
+            <div class="logo">
+                <h1>Magazyn Gita</h1>
+            </div>
+            
+            <nav class="gitanav">
+                <p>Moduł: Zarządzanie użytkownikami</p>
+                <ul>
+                    <li><a href="#" class="active">Przegląd personel</a></li>
+                    <li><a href="#">Rejestracja pracownika</a></li>
+                    <li><a href="#">Użytkownicy zapomniani (RODO)</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main">
+            
+            <header class="header">
+                <div class="info">Administrator: Zalogowany</div>
+            </header>
+
+            <section class="zaw">
+                <h2>Baza pracowników - Magazyn Gita</h2>
+                
+                <div class="search-bar">
+                    <form id="emp-search">
+                        <div class="tabelka">
+                            <label for="login">Login</label>
+                            <input type="text" id="login" name="login">
+
+                            <label for="name">Imię i Nazwisko</label>
+                            <input type="text" id="name" name="name">
+
+                            <label for="pesel">PESEL</label>
+                            <input type="text" id="pesel" name="pesel">
+
+                            <label for="role">Rola</label>
+                            <select id="role" name="role">
+                                <option value="Pracownik">Pracownik</option>
+                                <option value="Kierownik">Kierownik</option>
+                            </select>
+                        </div>
+                        <button type="submit">Wyszukaj</button>
+                        <button type="reset">Wyczyść</button>
+                    </form>
+                </div>
+
+                <div class="tabelka-wyniki">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Login</th>
+                                <th>Imię i Nazwisko</th>
+                                <th>PESEL</th>
+                                <th>E-mail</th>
+                                <th>Status</th>
+                                <th>Akcje</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bd-dane">
+                            </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
